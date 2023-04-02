@@ -20,9 +20,8 @@ After cloning the project, Install Maven requirements (if not prompted automatic
 
 H2 Database: http://localhost:8080/h2
 
-REST API documentation: http://localhost:8080/swagger-ui/index.html#/
-
 ## REST API
+REST OpenAPI documentation: http://localhost:8080/swagger-ui/index.html#/
 ### City
 #### Methods working with the city and calculating delivery fee
 * Getting a list of cities.   
