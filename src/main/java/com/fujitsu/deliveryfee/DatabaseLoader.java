@@ -15,16 +15,14 @@ import java.util.Arrays;
 import java.util.List;
 
 @Component
-public class DatabaseLoaderOld {
+public class DatabaseLoader {
 /**
      * Use Spring to inject a {@link CityRepository}, {@link ExtraFeeRepository}, {@link RegionalBaseFeeRepository} that can then load data. Since this will run only after the app
      * is operational, the database will be up.
      **/
     @Bean
     CommandLineRunner init(CityRepository cityRepository,
-                           ExtraFeeRepository extraFeeRepository,
-                           RegionalBaseFeeRepository regionalBaseFeeRepository,
-                           StationRepository stationRepository) {
+                           RegionalBaseFeeRepository regionalBaseFeeRepository) {
         return args -> {
 
             regionalBaseFeeRepository.save(new RegionalBaseFee(1, 4,3.5,3));
