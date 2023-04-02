@@ -112,7 +112,6 @@ public class CityServiceImp implements CityService {
             case "car" -> city.getRegionalBaseFee().getCar();
             case "bike" -> city.getRegionalBaseFee().getBike();
             case "scooter" -> city.getRegionalBaseFee().getScooter();
-            //TODO change exception
             default -> throw new WrongVehicleTypeException("Wrong vehicle type :" + vehicle);
         };
     }
@@ -206,7 +205,6 @@ public class CityServiceImp implements CityService {
         }
 
         return switch (phenomenon) {
-            //TODO what about thunderstorm?
             case "glaze", "hail", "thunder" -> throw new VehicleTypeForbiddenException("Usage of selected vehicle type is forbidden");
             default -> 0;
         };

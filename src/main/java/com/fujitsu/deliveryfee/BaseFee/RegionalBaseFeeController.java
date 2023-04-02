@@ -62,7 +62,6 @@ public class RegionalBaseFeeController {
     public ResponseEntity<RegionalBaseFee> updateFee(@PathVariable Long id, @PathVariable String value) {
 
         String[] split = value.split(",");
-        //TODO there can be problem with verification. Simple verification.
         if (split.length == 3 && regionalBaseFeeService.findById(id).isPresent()) {
                 RegionalBaseFee regionalBaseFee = regionalBaseFeeService.findById(id).get();
 
