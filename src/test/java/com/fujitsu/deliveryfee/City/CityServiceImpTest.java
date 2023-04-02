@@ -242,7 +242,7 @@ class CityServiceImpTest {
     void isCityExist() {
         City city = getCities().get(0);
         cityServiceImp.save(city);
-        boolean actual = cityServiceImp.isCityExist(city.getId());
+        boolean actual = cityServiceImp.isCityExist((int) city.getId());
 
         Assertions.assertTrue(actual);
     }
